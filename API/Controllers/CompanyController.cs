@@ -24,10 +24,35 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IReadOnlyList<CompanyEntity>>> GetCompany([FromQuery] CompanySpecParams companyParams)
+        public async Task<ActionResult<IReadOnlyList<CompanyEntity>>> GetCompanies([FromQuery] CompanySpecParams companyParams)
         {
             Pagination<CompanyDto> company = await _companyLogic.GetCompanyLogic(companyParams);
             return Ok(company);
         }
+
+        [HttpGet("{id}")]
+        public async Task<ActionResult<CompanyEntity>> GetCompany(int id) { 
+            CompanyDto company = await _companyLogic.GetCompanyIdLogic(id);
+            return Ok(company);
+        }
+
+        [HttpPost]
+        public async Task<ActionResult<CompanyDto>> PostCompany([FromBody] CompanyEntity company) {
+            CompanyDto save = await _companyLogic.PostCompany(company);
+            return Ok(save);
+        }
+
+        [HttpPut]
+        public async Task<ActionResult<CompanyDto>> PutCompany([FromBody] CompanyEntity company) { 
+            CompanyDto update = await _companyLogic.PutCompany(company);
+            return Ok(update);
+        }
+
+        [HttpDelete]
+        public async Task<ActionResult<CompanyDto>> DeleteCompany([FromBody] CompanyEntity company) { 
+            CompanyDto delete = await _companyLogic.DeleteCompany(company);
+            return Ok(delete);
+        }
+
     }
 }

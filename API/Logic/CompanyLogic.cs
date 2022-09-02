@@ -24,5 +24,29 @@ namespace API.Logic
             IReadOnlyList<CompanyDto> companiesToReturn = _mapper.Map<IReadOnlyList<CompanyEntity>, IReadOnlyList<CompanyDto>>(companies);
             return new Pagination<CompanyDto>(companyParams.PageIndex, companyParams.PageSize, totalItems, companiesToReturn);
         }
+
+        public async Task<CompanyDto> GetCompanyIdLogic(int id) {
+            var company = await _company.GetByIdAsync(id);
+            CompanyDto companyDto = _mapper.Map<CompanyEntity, CompanyDto>(company);
+            return companyDto;
+        }
+
+        public async Task<CompanyDto> PostCompany(CompanyEntity company) {
+            CompanyEntity companyEntity =  await _company.Add(company);
+            CompanyDto companyDto = _mapper.Map<CompanyEntity, CompanyDto>(companyEntity);
+            return companyDto;
+        }
+
+        public async Task<CompanyDto> PutCompany(CompanyEntity company) {
+            CompanyEntity companyEntity = await _company.Update(company);
+            CompanyDto companyDto = _mapper.Map<CompanyEntity, CompanyDto>(companyEntity);
+            return companyDto;
+        }
+
+        public async Task<CompanyDto> DeleteCompany(CompanyEntity company) { 
+            CompanyEntity companyEntity = await _company.Delete(company);
+            CompanyDto companyDto = _mapper.Map<CompanyEntity, CompanyDto>(companyEntity);
+            return companyDto;
+        }
     }
 }
