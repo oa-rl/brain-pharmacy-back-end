@@ -1,6 +1,7 @@
 ﻿using API.Dtos;
 using API.Helpers;
 using AutoMapper;
+using core;
 using Core.Entities;
 using Core.Interfaces;
 using Core.Specifications;
@@ -31,10 +32,12 @@ namespace API.Logic
             return companyDto;
         }
 
-        public async Task<CompanyDto> PostCompany(CompanyEntity company) {
+        public async Task<ResponseOk<CompanyDto>> PostCompany(CompanyEntity company) {
+            
             CompanyEntity companyEntity =  await _company.Add(company);
             CompanyDto companyDto = _mapper.Map<CompanyEntity, CompanyDto>(companyEntity);
-            return companyDto;
+            ResponseOk<CompanyDto> response = new(201,true,companyDto);
+            return response;
         }
 
         public async Task<CompanyDto> PutCompany(CompanyEntity company) {

@@ -2,6 +2,7 @@
 using API.Helpers;
 using API.Logic;
 using AutoMapper;
+using core;
 using Core.Entities;
 using Core.Interfaces;
 using Core.Specifications;
@@ -37,9 +38,9 @@ namespace API.Controllers
         }
 
         [HttpPost]
-        public async Task<ActionResult<CompanyDto>> PostCompany([FromBody] CompanyEntity company) {
-            CompanyDto save = await _companyLogic.PostCompany(company);
-            return Ok(save);
+        public async Task<ResponseOk<CompanyDto>> PostCompany([FromBody] CompanyEntity company)
+        {
+            return await _companyLogic.PostCompany(company);
         }
 
         [HttpPut]
