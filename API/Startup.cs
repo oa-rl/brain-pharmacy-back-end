@@ -10,6 +10,8 @@ namespace API
     public class Startup
     {
         private readonly IConfiguration _conf;
+        readonly string CORSOpenPolicy = "CorsPolicy";
+
 
         public Startup(IConfiguration conf)
         {
@@ -37,7 +39,7 @@ namespace API
             {
                 opt.AddPolicy("CorsPolicy", policy =>
                 {
-                    policy.AllowAnyHeader().AllowAnyMethod();//.WithOrigins("")
+                    policy.WithOrigins("*").AllowAnyHeader().AllowAnyMethod();
                 });
             });
         }

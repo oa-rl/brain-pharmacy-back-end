@@ -1,61 +1,110 @@
 ﻿++Solución "brain-pharmacy-back-end" ‎(3 de 3 proyectos)
 i:{00000000-0000-0000-0000-000000000000}:brain-pharmacy-back-end.sln
-++Documentos de script
-++VM5
-++chromewebdata
-++VM12
-++VM13
-++VM14
-++VM15
-++VM16
-++VM17
-++VM18
-++VM19
-++VM20
-++VM21
-++VM22
-++VM23
-++VM24
-++VM25
-++VM26
-++VM27
-++VM28
-++VM29
-++VM30
-++VM31
-++VM32
-++VM33
-++VM34
-++VM35
-++VM36
-++VM37
-++VM38
-++VM39
-++VM40
-++core
-i:{00000000-0000-0000-0000-000000000000}:core
-i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\core\bin\debug\net6.0\core.dll
+++infrastructure
+i:{00000000-0000-0000-0000-000000000000}:infrastructure
+i:{a251a220-f568-4044-aa99-0d4b01d95a42}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\infrastructure.csproj
 ++Dependencias
-i:{16cd0667-9a30-4ef3-ac2a-73411daf5321}:>267
-i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:>322
-i:{a251a220-f568-4044-aa99-0d4b01d95a42}:>190
+i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:>402
+i:{16cd0667-9a30-4ef3-ac2a-73411daf5321}:>401
+i:{a251a220-f568-4044-aa99-0d4b01d95a42}:>578
+++Data
+i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\
+++Config
+i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\config\
+++migrations
+i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\migrations\
+++SeedData
+i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\seeddata\
+++Class1.cs
+i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\class1.cs
+i:{16cd0667-9a30-4ef3-ac2a-73411daf5321}:c:\users\61936\documents\brain\brain-pharmacy-back-end\core\class1.cs
+++GenericRepository.cs
+i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\genericrepository.cs
+++SpecificationEvaluator.cs
+i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\specificationevaluator.cs
+++StoreContext.cs
+i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\storecontext.cs
+++StoreContextSeed.cs
+i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\storecontextseed.cs
+++Analizadores
+i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:analizadores
+i:{16cd0667-9a30-4ef3-ac2a-73411daf5321}:analizadores
+i:{a251a220-f568-4044-aa99-0d4b01d95a42}:analizadores
+++Marcos de trabajo
+i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:marcos de trabajo
+i:{16cd0667-9a30-4ef3-ac2a-73411daf5321}:marcos de trabajo
+i:{a251a220-f568-4044-aa99-0d4b01d95a42}:marcos de trabajo
+++Paquetes
+i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:paquetes
+i:{a251a220-f568-4044-aa99-0d4b01d95a42}:paquetes
+++Proyectos
+i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:proyectos
+i:{a251a220-f568-4044-aa99-0d4b01d95a42}:proyectos
+++BranchConfiguration.cs
+i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\config\branchconfiguration.cs
+++CompanyConfiguration.cs
+i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\config\companyconfiguration.cs
+++ProductConfiguration.cs
+i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\config\productconfiguration.cs
+++20220603213033_InitialCreate.cs
+i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\migrations\20220603213033_initialcreate.cs
+++20220603222227_AddConfigurationCompany.cs
+i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\migrations\20220603222227_addconfigurationcompany.cs
+++20220608014905_AddSatisfactionSurvey.cs
+i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\migrations\20220608014905_addsatisfactionsurvey.cs
+++20220610054328_ChangeNameTest.cs
+i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\migrations\20220610054328_changenametest.cs
+++20220613173331_AddProduct.cs
+i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\migrations\20220613173331_addproduct.cs
+++StoreContextModelSnapshot.cs
+i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\migrations\storecontextmodelsnapshot.cs
+++branch.json
+i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\seeddata\branch.json
+++company2.json
+i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\seeddata\company2.json
+++Microsoft.CodeAnalysis.CSharp.NetAnalyzers
+i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{16cd0667-9a30-4ef3-ac2a-73411daf5321}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+i:{a251a220-f568-4044-aa99-0d4b01d95a42}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
+++Microsoft.CodeAnalysis.NetAnalyzers
+i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{16cd0667-9a30-4ef3-ac2a-73411daf5321}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+i:{a251a220-f568-4044-aa99-0d4b01d95a42}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
+++Microsoft.EntityFrameworkCore.Analyzers
+i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.7\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+i:{a251a220-f568-4044-aa99-0d4b01d95a42}:c:\users\61936\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.8\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
+++Microsoft.Extensions.Logging.Generators
+i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\.nuget\packages\microsoft.extensions.logging.abstractions\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+i:{a251a220-f568-4044-aa99-0d4b01d95a42}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.2\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
+++System.Text.Json.SourceGeneration
+i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.2\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{16cd0667-9a30-4ef3-ac2a-73411daf5321}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.2\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+i:{a251a220-f568-4044-aa99-0d4b01d95a42}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.2\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
+++Microsoft.NETCore.App
+i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\microsoft.netcore.app
+i:{16cd0667-9a30-4ef3-ac2a-73411daf5321}:c:\users\61936\documents\brain\brain-pharmacy-back-end\core\microsoft.netcore.app
+i:{a251a220-f568-4044-aa99-0d4b01d95a42}:c:\users\61936\documents\brain\brain-pharmacy-back-end\api\microsoft.netcore.app
+++Npgsql.EntityFrameworkCore.PostgreSQL (6.0.6)
+i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:>587
+++core
+i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\core\core.csproj
+i:{00000000-0000-0000-0000-000000000000}:core
+++20220603213033_InitialCreate.Designer.cs
+i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\migrations\20220603213033_initialcreate.designer.cs
+++20220603222227_AddConfigurationCompany.Designer.cs
+i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\migrations\20220603222227_addconfigurationcompany.designer.cs
+++20220608014905_AddSatisfactionSurvey.Designer.cs
+i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\migrations\20220608014905_addsatisfactionsurvey.designer.cs
+++20220610054328_ChangeNameTest.Designer.cs
+i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\migrations\20220610054328_changenametest.designer.cs
+++20220613173331_AddProduct.Designer.cs
+i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\migrations\20220613173331_addproduct.designer.cs
 ++Entities
 i:{16cd0667-9a30-4ef3-ac2a-73411daf5321}:c:\users\61936\documents\brain\brain-pharmacy-back-end\core\entities\
 ++Interfaces
 i:{16cd0667-9a30-4ef3-ac2a-73411daf5321}:c:\users\61936\documents\brain\brain-pharmacy-back-end\core\interfaces\
 ++Specifications
 i:{16cd0667-9a30-4ef3-ac2a-73411daf5321}:c:\users\61936\documents\brain\brain-pharmacy-back-end\core\specifications\
-++Class1.cs
-i:{16cd0667-9a30-4ef3-ac2a-73411daf5321}:c:\users\61936\documents\brain\brain-pharmacy-back-end\core\class1.cs
-i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\class1.cs
-++Analizadores
-i:{16cd0667-9a30-4ef3-ac2a-73411daf5321}:analizadores
-i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:analizadores
-i:{a251a220-f568-4044-aa99-0d4b01d95a42}:analizadores
-++Marcos de trabajo
-i:{16cd0667-9a30-4ef3-ac2a-73411daf5321}:marcos de trabajo
-i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:marcos de trabajo
-i:{a251a220-f568-4044-aa99-0d4b01d95a42}:marcos de trabajo
 ++BaseEntity.cs
 i:{16cd0667-9a30-4ef3-ac2a-73411daf5321}:c:\users\61936\documents\brain\brain-pharmacy-back-end\core\entities\baseentity.cs
 ++BranchEntity.cs
@@ -86,91 +135,10 @@ i:{16cd0667-9a30-4ef3-ac2a-73411daf5321}:c:\users\61936\documents\brain\brain-ph
 i:{16cd0667-9a30-4ef3-ac2a-73411daf5321}:c:\users\61936\documents\brain\brain-pharmacy-back-end\core\specifications\productfilterspecification.cs
 ++ProductSpecParams.cs
 i:{16cd0667-9a30-4ef3-ac2a-73411daf5321}:c:\users\61936\documents\brain\brain-pharmacy-back-end\core\specifications\productspecparams.cs
-++Microsoft.CodeAnalysis.CSharp.NetAnalyzers
-i:{16cd0667-9a30-4ef3-ac2a-73411daf5321}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
-i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
-i:{a251a220-f568-4044-aa99-0d4b01d95a42}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.csharp.netanalyzers.dll
-++Microsoft.CodeAnalysis.NetAnalyzers
-i:{16cd0667-9a30-4ef3-ac2a-73411daf5321}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
-i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
-i:{a251a220-f568-4044-aa99-0d4b01d95a42}:c:\program files\dotnet\sdk\6.0.200\sdks\microsoft.net.sdk\analyzers\microsoft.codeanalysis.netanalyzers.dll
-++System.Text.Json.SourceGeneration
-i:{16cd0667-9a30-4ef3-ac2a-73411daf5321}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.2\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
-i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.2\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
-i:{a251a220-f568-4044-aa99-0d4b01d95a42}:c:\program files\dotnet\packs\microsoft.netcore.app.ref\6.0.2\analyzers\dotnet\cs\system.text.json.sourcegeneration.dll
-++Microsoft.NETCore.App
-i:{16cd0667-9a30-4ef3-ac2a-73411daf5321}:c:\users\61936\documents\brain\brain-pharmacy-back-end\core\microsoft.netcore.app
-i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\microsoft.netcore.app
-i:{a251a220-f568-4044-aa99-0d4b01d95a42}:c:\users\61936\documents\brain\brain-pharmacy-back-end\api\microsoft.netcore.app
-++infrastructure
-i:{00000000-0000-0000-0000-000000000000}:infrastructure
-i:{a251a220-f568-4044-aa99-0d4b01d95a42}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\infrastructure.csproj
-++Data
-i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\
-++GenericRepository.cs
-i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\genericrepository.cs
-++SpecificationEvaluator.cs
-i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\specificationevaluator.cs
-++StoreContext.cs
-i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\storecontext.cs
-++StoreContextSeed.cs
-i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\storecontextseed.cs
-++Paquetes
-i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:paquetes
-i:{a251a220-f568-4044-aa99-0d4b01d95a42}:paquetes
-++Proyectos
-i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:proyectos
-i:{a251a220-f568-4044-aa99-0d4b01d95a42}:proyectos
-++Config
-i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\config\
-++migrations
-i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\migrations\
-++SeedData
-i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\seeddata\
-++Microsoft.EntityFrameworkCore.Analyzers
-i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.7\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
-i:{a251a220-f568-4044-aa99-0d4b01d95a42}:c:\users\61936\.nuget\packages\microsoft.entityframeworkcore.analyzers\6.0.8\analyzers\dotnet\cs\microsoft.entityframeworkcore.analyzers.dll
-++Microsoft.Extensions.Logging.Generators
-i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\.nuget\packages\microsoft.extensions.logging.abstractions\6.0.0\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
-i:{a251a220-f568-4044-aa99-0d4b01d95a42}:c:\program files\dotnet\packs\microsoft.aspnetcore.app.ref\6.0.2\analyzers\dotnet\roslyn4.0\cs\microsoft.extensions.logging.generators.dll
-++Npgsql.EntityFrameworkCore.PostgreSQL (6.0.6)
-i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:>382
-++BranchConfiguration.cs
-i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\config\branchconfiguration.cs
-++CompanyConfiguration.cs
-i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\config\companyconfiguration.cs
-++ProductConfiguration.cs
-i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\config\productconfiguration.cs
-++20220603213033_InitialCreate.cs
-i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\migrations\20220603213033_initialcreate.cs
-++20220603222227_AddConfigurationCompany.cs
-i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\migrations\20220603222227_addconfigurationcompany.cs
-++20220608014905_AddSatisfactionSurvey.cs
-i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\migrations\20220608014905_addsatisfactionsurvey.cs
-++20220610054328_ChangeNameTest.cs
-i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\migrations\20220610054328_changenametest.cs
-++20220613173331_AddProduct.cs
-i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\migrations\20220613173331_addproduct.cs
-++StoreContextModelSnapshot.cs
-i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\migrations\storecontextmodelsnapshot.cs
-++branch.json
-i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\seeddata\branch.json
-++company2.json
-i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\seeddata\company2.json
-++20220603213033_InitialCreate.Designer.cs
-i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\migrations\20220603213033_initialcreate.designer.cs
-++20220603222227_AddConfigurationCompany.Designer.cs
-i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\migrations\20220603222227_addconfigurationcompany.designer.cs
-++20220608014905_AddSatisfactionSurvey.Designer.cs
-i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\migrations\20220608014905_addsatisfactionsurvey.designer.cs
-++20220610054328_ChangeNameTest.Designer.cs
-i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\migrations\20220610054328_changenametest.designer.cs
-++20220613173331_AddProduct.Designer.cs
-i:{601cb5eb-848b-46dc-84c3-f7222e54fa58}:c:\users\61936\documents\brain\brain-pharmacy-back-end\infrastructure\data\migrations\20220613173331_addproduct.designer.cs
 ++API
 i:{00000000-0000-0000-0000-000000000000}:API
 ++Connected Services 
-i:{a251a220-f568-4044-aa99-0d4b01d95a42}:>191
+i:{a251a220-f568-4044-aa99-0d4b01d95a42}:>579
 ++Properties
 i:{a251a220-f568-4044-aa99-0d4b01d95a42}:c:\users\61936\documents\brain\brain-pharmacy-back-end\api\properties\
 ++wwwroot
@@ -208,6 +176,7 @@ i:{a251a220-f568-4044-aa99-0d4b01d95a42}:c:\users\61936\documents\brain\brain-ph
 ++Startup.cs
 i:{a251a220-f568-4044-aa99-0d4b01d95a42}:c:\users\61936\documents\brain\brain-pharmacy-back-end\api\startup.cs
 ++No se detectaron dependencias de servicio
+i:{a251a220-f568-4044-aa99-0d4b01d95a42}:>580
 ++launchSettings.json
 i:{a251a220-f568-4044-aa99-0d4b01d95a42}:c:\users\61936\documents\brain\brain-pharmacy-back-end\api\properties\launchsettings.json
 ++css
@@ -259,13 +228,13 @@ i:{a251a220-f568-4044-aa99-0d4b01d95a42}:c:\program files\dotnet\sdk\6.0.200\sdk
 ++Microsoft.AspNetCore.App
 i:{a251a220-f568-4044-aa99-0d4b01d95a42}:c:\users\61936\documents\brain\brain-pharmacy-back-end\api\microsoft.aspnetcore.app
 ++AutoMapper.Extensions.Microsoft.DependencyInjection (11.0.0)
-i:{a251a220-f568-4044-aa99-0d4b01d95a42}:>374
+i:{a251a220-f568-4044-aa99-0d4b01d95a42}:>607
 ++Microsoft.EntityFrameworkCore (6.0.8)
-i:{a251a220-f568-4044-aa99-0d4b01d95a42}:>375
+i:{a251a220-f568-4044-aa99-0d4b01d95a42}:>606
 ++Microsoft.EntityFrameworkCore.Design (6.0.8)
-i:{a251a220-f568-4044-aa99-0d4b01d95a42}:>377
+i:{a251a220-f568-4044-aa99-0d4b01d95a42}:>608
 ++Swashbuckle.AspNetCore (6.4.0)
-i:{a251a220-f568-4044-aa99-0d4b01d95a42}:>378
+i:{a251a220-f568-4044-aa99-0d4b01d95a42}:>609
 ++site.css
 i:{a251a220-f568-4044-aa99-0d4b01d95a42}:c:\users\61936\documents\brain\brain-pharmacy-back-end\api\wwwroot\css\site.css
 ++site.js
@@ -395,11 +364,14 @@ i:{a251a220-f568-4044-aa99-0d4b01d95a42}:c:\users\61936\documents\brain\brain-ph
 i:{a251a220-f568-4044-aa99-0d4b01d95a42}:c:\users\61936\documents\brain\brain-pharmacy-back-end\api\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js
 ++bootstrap.min.js.map
 i:{a251a220-f568-4044-aa99-0d4b01d95a42}:c:\users\61936\documents\brain\brain-pharmacy-back-end\api\wwwroot\lib\bootstrap\dist\js\bootstrap.min.js.map
-++Base de datos de SQL Server
-i:{a251a220-f568-4044-aa99-0d4b01d95a42}:>669
-++Se detectó la dependencia Base de datos de SQL Server
-i:{a251a220-f568-4044-aa99-0d4b01d95a42}:>670
+++Documentos de script
 ++index.html
 ++swagger-ui-bundle.js
 ++swagger-ui-standalone-preset.js
 ++aspnetcore-browser-refresh.js
+++Archivos varios
+i:{00000000-0000-0000-0000-000000000000}:Archivos varios
+++ActionResult.cs
+++ResponseOk.cs
+i:{16cd0667-9a30-4ef3-ac2a-73411daf5321}:c:\users\61936\documents\brain\brain-pharmacy-back-end\core\responseok.cs
+++ControllerBase.cs
