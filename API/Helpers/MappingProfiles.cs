@@ -9,6 +9,7 @@ namespace API.Helpers
         public MappingProfiles()
         {
             CreateMap<CompanyEntity, CompanyDto>();
+            CreateMap<BranchEntity, BranchDto>();
         }
     }
 }
