@@ -24,27 +24,27 @@ namespace API.Controllers
         }
 
         [HttpGet]
-        public async Task<ActionResult<IReadOnlyList<BranchDto>>> GetBranch([FromQuery] BranchSpecParams branchParams)
+        public async Task<ActionResult<IReadOnlyList<BranchDto>>> GetBranches([FromQuery] BranchSpecParams branchParams)
         {
             Pagination<BranchDto> branch = await _branchLogic.GetBranchLogic(branchParams);
             return Ok(branch);
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<BranchEntity>> GetCompany(int id)
+        public async Task<ActionResult<BranchEntity>> GetBranch(int id)
         {
             BranchDto branch = await _branchLogic.GetBranchIdLogic(id);
             return Ok(branch);
         }
 
         [HttpPost]
-        public async Task<ResponseOk<BranchDto>> PostCompany([FromBody] BranchEntity branch)
+        public async Task<ResponseOk<BranchDto>> PostBranch([FromBody] BranchEntity branch)
         {
             return await _branchLogic.PostBranch(branch);
         }
 
         [HttpPut]
-        public async Task<ActionResult<BranchDto>> PutCompany([FromBody] BranchEntity branch)
+        public async Task<ActionResult<BranchDto>> PutBranch([FromBody] BranchEntity branch)
         {
             BranchDto update = await _branchLogic.PutBranch(branch);
             return Ok(update);
@@ -56,8 +56,5 @@ namespace API.Controllers
             BranchDto delete = await _branchLogic.DeleteBranch(branch);
             return Ok(delete);
         }
-
-
-
     }
 }
