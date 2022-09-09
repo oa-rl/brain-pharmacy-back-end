@@ -1,4 +1,4 @@
-﻿using core.Entities;
+﻿using Core.Entities;
 using Core.Specifications;
 
 namespace core.Specifications

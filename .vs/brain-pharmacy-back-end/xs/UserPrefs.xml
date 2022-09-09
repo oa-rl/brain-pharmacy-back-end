@@ -1,0 +1,31 @@
+﻿<Properties StartupConfiguration="{A251A220-F568-4044-AA99-0D4B01D95A42}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="API/appsettings.Development.json">
+    <Files>
+      <File FileName="API/Controllers/BranchController.cs" />
+      <File FileName="API/Controllers/CompanyController.cs" />
+      <File FileName="API/Logic/CompanyLogic.cs" />
+      <File FileName="API/Startup.cs" />
+      <File FileName="API/appsettings.Development.json" Line="1" Column="2" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="brain-pharmacy-back-end" expanded="True">
+            <Node name="API" expanded="True" />
+            <Node name="core" expanded="True">
+              <Node name="Entities" expanded="True" />
+            </Node>
+            <Node name="infrastructure" expanded="True" />
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

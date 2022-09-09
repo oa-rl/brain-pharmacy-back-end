@@ -1,8 +1,9 @@
-﻿using Core.Entities;
+﻿using System.ComponentModel.DataAnnotations.Schema;
 
-namespace core.Entities
+namespace Core.Entities
 {
-    public class SizeEntity: BaseEntity
+    [Table(name: "inv_size")]
+    public class SizeEntity : BaseEntity
     {
         public string Name { get; set; } = "";
     }
