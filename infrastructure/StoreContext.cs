@@ -1,4 +1,5 @@
-﻿using Core.Entities;
+﻿using core.Entities;
+using Core.Entities;
 using Microsoft.EntityFrameworkCore;
 using System.Reflection;
 
@@ -13,6 +14,7 @@ namespace Infrastructure
         public DbSet<CompanyEntity> Companies { get; set; }
         public DbSet<BranchEntity> Branches{ get; set; }
         public DbSet<ProductEntity> Products{ get; set; }
+        public DbSet<SizeEntity> Sizes{ get; set; }
         public DbSet<SatisfactionSurveyEntity> SatisfactionSurveyEntity { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

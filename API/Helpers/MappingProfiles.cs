@@ -11,6 +11,7 @@ namespace API.Helpers
             CreateMap<CompanyEntity, CompanyDto>();
             CreateMap<BranchEntity, BranchDto>();
             CreateMap<ProductEntity, ProductDto>();
+            CreateMap<SizeEntity, SizeDto>();
         }
     }
 }
