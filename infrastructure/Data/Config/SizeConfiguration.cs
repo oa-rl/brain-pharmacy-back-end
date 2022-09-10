@@ -4,9 +4,9 @@ using Microsoft.EntityFrameworkCore.Metadata.Builders;
 
 namespace infrastructure.Data.Config
 {
-    public class SizeConfiguration : IEntityTypeConfiguration<SizeEntity>
+    public class SizeConfiguration : IEntityTypeConfiguration<MedicalHouseEntity>
     {
-        public void Configure(EntityTypeBuilder<SizeEntity> builder)
+        public void Configure(EntityTypeBuilder<MedicalHouseEntity> builder)
         {
             builder.Property(p => p.Id).IsRequired();
             builder.Property(p => p.Name).IsRequired().HasMaxLength(150);

@@ -1,6 +1,6 @@
 ﻿namespace Core.Specifications
 {
-    public class SizeSpecParams: BaseSpecParams
+    public class MedicalHouseSpecParams: BaseSpecParams
     {
         public int? id { get; set; }
     }

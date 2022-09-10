@@ -2,10 +2,10 @@
 
 namespace Core.Specifications
 {
-    public class SizeFilterSpecification: BaseSpecification<MedicalHouseEntity>
+    public class MedicalHouseFilterSpecification : BaseSpecification<MedicalHouseEntity>
     {
-        public SizeFilterSpecification(SizeSpecParams criteria) : base(x => (string.IsNullOrEmpty(criteria.Search) || x.Name.ToLower().Contains(criteria.Search)) &&
-         (!criteria.id.HasValue || x.Id == criteria.id))
+        public MedicalHouseFilterSpecification(MedicalHouseSpecParams criteria) : base(x => (string.IsNullOrEmpty(criteria.Search) || x.Name.ToLower().Contains(criteria.Search)) &&
+        (!criteria.id.HasValue || x.Id == criteria.id))
         {
             ApplyPaging(criteria.PageSize * (criteria.PageIndex - 1), criteria.PageSize);
             if (!string.IsNullOrEmpty(criteria.sort))

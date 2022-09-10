@@ -2,21 +2,21 @@
 using API.Helpers;
 using API.Logic;
 using AutoMapper;
-using core;
-using core.Specifications;
+using Core;
 using Core.Entities;
 using Core.Interfaces;
+using Core.Specifications;
 using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
     public class SizeController: BaseController
     {
-        private readonly IGenericRepository<SizeEntity> _size;
+        private readonly IGenericRepository<MedicalHouseEntity> _size;
         private readonly IMapper _mapper;
         private readonly SizeLogic _sizeLogic;
         
-        public SizeController(IGenericRepository<SizeEntity> size, IMapper mapper)
+        public SizeController(IGenericRepository<MedicalHouseEntity> size, IMapper mapper)
         {
             _size = size;
             _mapper = mapper;
@@ -38,20 +38,20 @@ namespace API.Controllers
         }
 
         [HttpPost]
-        public async Task<ResponseOk<SizeDto>> PostSize([FromBody] SizeEntity size)
+        public async Task<ResponseOk<SizeDto>> PostSize([FromBody] MedicalHouseEntity size)
         {
             return await _sizeLogic.PostSize(size);
         }
 
         [HttpPut]
-        public async Task<ActionResult<SizeDto>> PutSize([FromBody] SizeEntity size)
+        public async Task<ActionResult<SizeDto>> PutSize([FromBody] MedicalHouseEntity size)
         {
             SizeDto update = await _sizeLogic.PutSize(size);
             return Ok(update);
         }
 
         [HttpDelete]
-        public async Task<ActionResult<SizeDto>> DeleteSize([FromBody] SizeEntity size)
+        public async Task<ActionResult<SizeDto>> DeleteSize([FromBody] MedicalHouseEntity size)
         {
             SizeDto delete = await _sizeLogic.DeleteSize(size);
             return Ok(delete);
