@@ -2,7 +2,7 @@
 
 namespace Core.Specifications
 {
-    public class SizeFilterSpecification: BaseSpecification<MedicalHouseEntity>
+    public class SizeFilterSpecification: BaseSpecification<SizeEntity>
     {
         public SizeFilterSpecification(SizeSpecParams criteria) : base(x => (string.IsNullOrEmpty(criteria.Search) || x.Name.ToLower().Contains(criteria.Search)) &&
          (!criteria.id.HasValue || x.Id == criteria.id))

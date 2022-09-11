@@ -13,8 +13,8 @@ namespace Infrastructure
         public DbSet<CompanyEntity> Companies { get; set; }
         public DbSet<BranchEntity> Branches{ get; set; }
         public DbSet<ProductEntity> Products{ get; set; }
-        public DbSet<MedicalHouseEntity> Sizes{ get; set; }
-        public DbSet<MedicalHouseEntity> MedicalHouse{ get; set; }
+        public DbSet<SizeEntity> Sizes{ get; set; }
+        public DbSet<MedicalHouseEntity> MedicalHouses{ get; set; }
         public DbSet<SatisfactionSurveyEntity> SatisfactionSurveyEntity { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
