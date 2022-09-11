@@ -13,6 +13,8 @@ namespace API.Helpers
             CreateMap<ProductEntity, ProductDto>();
             CreateMap<SizeEntity, SizeDto>();
             CreateMap<MedicalHouseEntity, MedicalHouseDto>();
+            CreateMap<ProductCombinationEntity, ProductCombinationDto>();
+
         }
     }
 }
