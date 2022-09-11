@@ -40,23 +40,23 @@ namespace API.Logic
         public async Task<ResponseOk<ProductCombinationDto>> PostProduct(ProductCombinationEntity product)
         {
 
-            ProductCombinationEntity ProductEntity = await _product.Add(product);
-            ProductCombinationDto ProductDto = _mapper.Map<ProductCombinationEntity, ProductCombinationDto>(ProductEntity);
+            ProductCombinationEntity ProductCombination = await _product.Add(product);
+            ProductCombinationDto ProductDto = _mapper.Map<ProductCombinationEntity, ProductCombinationDto>(ProductCombination);
             ResponseOk<ProductCombinationDto> response = new(201, true, ProductDto);
             return response;
         }
 
         public async Task<ProductCombinationDto> PutProduct(ProductCombinationEntity product)
         {
-            ProductCombinationEntity ProductEntity = await _product.Update(product);
-            ProductCombinationDto ProductDto = _mapper.Map<ProductCombinationEntity, ProductCombinationDto>(ProductEntity);
+            ProductCombinationEntity ProductCombination = await _product.Update(product);
+            ProductCombinationDto ProductDto = _mapper.Map<ProductCombinationEntity, ProductCombinationDto>(ProductCombination);
             return ProductDto;
         }
 
         public async Task<ProductCombinationDto> DeleteProduct(ProductCombinationEntity product)
         {
-            ProductCombinationEntity ProductEntity = await _product.Delete(product);
-            ProductCombinationDto ProductDto = _mapper.Map<ProductCombinationEntity, ProductCombinationDto>(ProductEntity);
+            ProductCombinationEntity ProductCombination = await _product.Delete(product);
+            ProductCombinationDto ProductDto = _mapper.Map<ProductCombinationEntity, ProductCombinationDto>(ProductCombination);
             return ProductDto;
         }
 

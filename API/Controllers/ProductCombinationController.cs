@@ -11,8 +11,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace API.Controllers
 {
-	public class ProductCombinationController : BaseController
-	{
+    public class ProductCombinationController : BaseController
+    {
         private readonly IGenericRepository<ProductCombinationEntity> _productCombination;
         private readonly IMapper _mapper;
         private readonly ProductCombinationLogic _productCombinationLogic;

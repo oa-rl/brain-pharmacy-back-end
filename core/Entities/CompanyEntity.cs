@@ -2,6 +2,7 @@
 
 namespace Core.Entities
 {
+    [Table(name: "core_company")]
     public class CompanyEntity : BaseEntity
     {
         public string Name { get; set; } = "";
