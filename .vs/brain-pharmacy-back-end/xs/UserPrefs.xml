@@ -1,18 +1,37 @@
 ﻿<Properties StartupConfiguration="{A251A220-F568-4044-AA99-0D4B01D95A42}|Default">
-  <MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.Workbench ActiveDocument="core/Specifications/ProductCombinationFilterSpecification.cs">
+    <Files>
+      <File FileName="API/Logic/ProductCombinationLogic.cs" Line="26" Column="42" />
+      <File FileName="core/Specifications/ProductCombinationFilterSpecification.cs" Line="11" Column="1" />
+      <File FileName="core/Specifications/ProductCombinationSpecParams.cs" Line="4" Column="48" />
+      <File FileName="core/Specifications/BaseSpecParams.cs" Line="10" Column="10" />
+      <File FileName="API/Controllers/SaleForController.cs" Line="29" Column="1" />
+    </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="brain-pharmacy-back-end" expanded="True" />
+          <Node name="brain-pharmacy-back-end" expanded="True">
+            <Node name="API" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Logic" expanded="True" />
+            </Node>
+            <Node name="Core" expanded="True">
+              <Node name="Specifications" expanded="True">
+                <Node name="ProductCombinationFilterSpecification.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
   </MonoDevelop.Ide.Workbench>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MultiItemStartupConfigurations />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
-    <BreakpointStore />
+    <BreakpointStore>
+      <Breakpoint file="/Users/andresreyes/Library/Mobile Documents/com~apple~CloudDocs/Desktop/brain/pharmacy/brain-pharmacy-back-end/API/Controllers/ProductController.cs" relfile="API/Controllers/ProductController.cs" line="44" column="1" />
+    </BreakpointStore>
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
   <MonoDevelop.Ide.ItemProperties.API PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
 </Properties>
