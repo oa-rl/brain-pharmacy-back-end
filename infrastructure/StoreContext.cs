@@ -18,6 +18,7 @@ namespace Infrastructure
         public DbSet<ProductCombinationEntity> ProductCombinations { get; set; }
         public DbSet<CustomerEntity> Customers { get; set; }
         public DbSet<UserEntity> User { get; set; }
+        public DbSet<ProfileEntity> Profile { get; set; }
         public DbSet<SatisfactionSurveyEntity> SatisfactionSurveyEntity { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

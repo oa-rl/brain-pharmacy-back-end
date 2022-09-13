@@ -16,6 +16,7 @@ namespace API.Helpers
             CreateMap<SaleForEntity, SaleForDto>();
             CreateMap<CustomerEntity, CustomerDto>();
             CreateMap<UserEntity, UserDto>();
+            CreateMap<ProfileEntity, ProfileDto>();
             CreateMap<ProductCombinationEntity, ProductCombinationDto>();
 
         }
