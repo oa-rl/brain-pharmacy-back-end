@@ -10,5 +10,6 @@ namespace Core.Entities
         public DateTime ExpirationDate { get; set; }
         public int Quantity { get; set; }
         public int OperationTypeId { get; set; }
+        public OperationTypeEntity? Operationtype { get; set; }
     }
 }
