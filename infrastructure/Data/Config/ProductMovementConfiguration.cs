@@ -10,7 +10,7 @@ namespace infrastructure.Data.Config
         {
             builder.Property(p => p.Id).IsRequired();
             builder.Property(p => p.ProductCombinationId).IsRequired();
-            builder.Property(p => p.ExpirationDate).IsRequired();
+            builder.Property(p => p.ExpirationDate);
             builder.Property(p => p.Quantity).IsRequired();
             builder.Property(p => p.OperationTypeId).IsRequired();
         }
