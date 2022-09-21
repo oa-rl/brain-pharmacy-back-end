@@ -9,6 +9,7 @@ namespace Core.Entities
         public DateTime Date { get; set; } = DateTime.Now;
         public int CustomerId { get; set; }
         public CustomerEntity?  Customer { get; set; }
+        public List<SaleInvoiceDetailsEntity>? SaleInvoiceDetails { get; set; }
 
     }
 }

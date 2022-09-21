@@ -21,6 +21,7 @@ namespace API.Helpers
             CreateMap<ProductMovementEntity, ProductMovementDto>();
             CreateMap<ProductCombinationEntity, ProductCombinationDto>();
             CreateMap<SaleInvoiceEntity, SaleInvoiceDto>();
+            CreateMap<SaleInvoiceDetailsEntity, SaleInvoiceDetailsDto>();
 
         }
     }

@@ -7,5 +7,6 @@
         public DateTime Date { get; set; } = DateTime.Now;
         public int CustomerId { get; set; }
         public CustomerDto? Customer { get; set; }
+        public List<SaleInvoiceDetailsDto>? SaleInvoiceDetails { get; set; }
     }
 }
