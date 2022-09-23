@@ -10,6 +10,6 @@ namespace Core.Entities
         public string Email { get; set; } = "";
         public string Password { get; set; } = "";
         public int ProfileId { get; set; }
-        public ProfileEntity? Profile { get; set; }
+        public virtual ProfileEntity? Profile { get; set; }
     }
 }

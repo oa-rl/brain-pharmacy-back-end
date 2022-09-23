@@ -3,6 +3,7 @@ using System;
 using Infrastructure;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 
@@ -11,9 +12,10 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace Infrastructure.Data.migrations
 {
     [DbContext(typeof(StoreContext))]
-    partial class StoreContextModelSnapshot : ModelSnapshot
+    [Migration("20220923174232_AddVirtualFiles")]
+    partial class AddVirtualFiles
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -311,6 +313,9 @@ namespace Infrastructure.Data.migrations
                     b.Property<int>("ProductCombinationId")
                         .HasColumnType("integer");
 
+                    b.Property<int?>("SaleInvoiceEntityId")
+                        .HasColumnType("integer");
+
                     b.Property<int>("SaleInvoiceId")
                         .HasColumnType("integer");
 
@@ -321,7 +326,7 @@ namespace Infrastructure.Data.migrations
 
                     b.HasIndex("ProductCombinationId");
 
-                    b.HasIndex("SaleInvoiceId");
+                    b.HasIndex("SaleInvoiceEntityId");
 
                     b.ToTable("sale_invoice_details");
                 });
@@ -502,15 +507,11 @@ namespace Infrastructure.Data.migrations
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
-                    b.HasOne("Core.Entities.SaleInvoiceEntity", "SaleInvoice")
+                    b.HasOne("Core.Entities.SaleInvoiceEntity", null)
                         .WithMany("SaleInvoiceDetails")
-                        .HasForeignKey("SaleInvoiceId")
-                        .OnDelete(DeleteBehavior.Cascade)
-                        .IsRequired();
+                        .HasForeignKey("SaleInvoiceEntityId");
 
                     b.Navigation("ProductCombination");
-
-                    b.Navigation("SaleInvoice");
                 });
 
             modelBuilder.Entity("Core.Entities.SaleInvoiceEntity", b =>
