@@ -31,9 +31,9 @@ namespace API.Controllers
         }
 
         [HttpGet("{id}")]
-        public async Task<ActionResult<SaleInvoiceDto>> GetSaleInvoice(int id)
+        public async Task<ActionResult<SaleInvoiceDto>> GetSaleInvoice([FromQuery] SaleInvoiceSpecParams saleInvoiceParams)
         {
-            SaleInvoiceDto product = await _saleInvoiceLogic.GetSaleInvoiceIdLogic(id);
+            SaleInvoiceDto product = await _saleInvoiceLogic.GetSaleInvoiceIdLogic(saleInvoiceParams);
             return Ok(product);
         }
 
