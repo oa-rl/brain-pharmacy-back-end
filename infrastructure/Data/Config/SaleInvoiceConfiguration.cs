@@ -12,6 +12,7 @@ namespace infrastructure.Data.Config
             builder.Property(p => p.Authorization).IsRequired();
             builder.Property(p => p.Date).IsRequired();
             builder.Property(p => p.CustomerId).IsRequired();
+            builder.Property(p => p.UserId).IsRequired();
         }
     }
 }

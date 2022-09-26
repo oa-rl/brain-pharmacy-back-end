@@ -1,0 +1,22 @@
+[
+  {
+    "Sign": "+",
+    "Description":  "Ingreso por compra"
+  },
+  {
+    "Sign": "+",
+    "Description": "Ingreso por traslado"
+  },
+  {
+    "Sign": "-",
+    "Description": "Salida por venta"
+  },
+  {
+    "Sign": "-",
+    "Description": "Salida por traslado"
+  },
+  {
+    "Sign": "-",
+    "Description": "Salida por merma"
+  }
+]

@@ -23,6 +23,7 @@ namespace Infrastructure
         public DbSet<ProductMovementEntity> ProductMovement { get; set; }
         public DbSet<SaleInvoiceEntity> SaleInvoice { get; set; }
         public DbSet<SaleInvoiceDetailsEntity> SaleInvoiceDetails { get; set; }
+        public DbSet<SaleForEntity> SaleFor { get; set; }
         public DbSet<SatisfactionSurveyEntity> SatisfactionSurveyEntity { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)

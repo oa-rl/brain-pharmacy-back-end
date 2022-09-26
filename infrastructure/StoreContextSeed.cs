@@ -29,6 +29,50 @@ namespace Infrastructure
                     }
                     await context.SaveChangesAsync();
                 }
+
+                if (!context.Sizes.Any())
+                {
+                    var objData = File.ReadAllText("../Infrastructure/Data/SeedData/sizes.json");
+                    var objets = JsonSerializer.Deserialize<List<SizeEntity>>(objData)!;
+                    foreach (var item in objets)
+                    {
+                        context.Sizes.Add(item);
+                    }
+                    await context.SaveChangesAsync();
+                }
+
+                if (!context.SaleFor.Any())
+                {
+                    var objData = File.ReadAllText("../Infrastructure/Data/SeedData/saleFor.json");
+                    var objets = JsonSerializer.Deserialize<List<SaleForEntity>>(objData)!;
+                    foreach (var item in objets)
+                    {
+                        context.SaleFor.Add(item);
+                    }
+                    await context.SaveChangesAsync();
+                }
+
+                if (!context.OperationType.Any())
+                {
+                    var objData = File.ReadAllText("../Infrastructure/Data/SeedData/operationType.json");
+                    var objets = JsonSerializer.Deserialize<List<OperationTypeEntity>>(objData)!;
+                    foreach (var item in objets)
+                    {
+                        context.OperationType.Add(item);
+                    }
+                    await context.SaveChangesAsync();
+                }
+
+                if (!context.Profile.Any())
+                {
+                    var objData = File.ReadAllText("../Infrastructure/Data/SeedData/profile.json");
+                    var objets = JsonSerializer.Deserialize<List<ProfileEntity>>(objData)!;
+                    foreach (var item in objets)
+                    {
+                        context.Profile.Add(item);
+                    }
+                    await context.SaveChangesAsync();
+                }
             }
             catch (Exception ex)
             {
