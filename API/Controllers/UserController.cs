@@ -15,12 +15,14 @@ namespace API.Controllers
         private readonly IGenericRepository<UserEntity> _user;
         private readonly IMapper _mapper;
         private readonly UserLogic _userLogic;
+        private readonly IConfiguration _configuration;
 
-        public UserController(IGenericRepository<UserEntity> user, IMapper mapper)
+        public UserController(IGenericRepository<UserEntity> user, IMapper mapper, IConfiguration configuration)
         {
             _user = user;
             _mapper = mapper;
-            _userLogic = new(_user, _mapper);
+            _configuration = configuration;
+            _userLogic = new(_user, _mapper, _configuration);
         }
 
         [HttpGet]
@@ -41,6 +43,13 @@ namespace API.Controllers
         public async Task<ResponseOk<UserDto>> PostUser([FromBody] UserEntity user)
         {
             return await _userLogic.PostUser(user);
+        }
+
+
+        [HttpPost("login")]
+        public async Task<ResponseOk<string>> Login([FromBody] LoginEntity login)
+        {
+            return await _userLogic.Login(login);
         }
 
         [HttpPut]

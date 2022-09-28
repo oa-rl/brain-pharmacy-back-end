@@ -4,7 +4,7 @@ namespace Core.Specifications
 {
     public class UserFilterSpecification: BaseSpecification<UserEntity>
     {
-        public UserFilterSpecification(UserSpecParams criteria) : base(x => (string.IsNullOrEmpty(criteria.Search) || x.Name.ToLower().Contains(criteria.Search)) &&
+        public UserFilterSpecification(UserSpecParams criteria) : base(x => (string.IsNullOrEmpty(criteria.Search) || x.Email.ToLower().Contains(criteria.Search)) &&
     (!criteria.id.HasValue || x.Id == criteria.id))
         {
             ApplyPaging(criteria.PageSize * (criteria.PageIndex - 1), criteria.PageSize);
