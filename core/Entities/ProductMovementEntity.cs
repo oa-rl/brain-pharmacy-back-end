@@ -11,5 +11,7 @@ namespace Core.Entities
         public int Quantity { get; set; }
         public int OperationTypeId { get; set; }
         public virtual OperationTypeEntity? Operationtype { get; set; }
+        public int? SaleInvoiceId { get; set; }
+        public virtual SaleInvoiceEntity? SaleInvoice { get; set; }
     }
 }

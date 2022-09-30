@@ -13,14 +13,16 @@ namespace API.Controllers
     public class SaleInvoiceController: BaseController
     {
         private readonly IGenericRepository<SaleInvoiceEntity> _saleInvoice;
+        private readonly IGenericRepository<ProductMovementEntity> _productMovement;
         private readonly IMapper _mapper;
         private readonly SaleInvoiceLogic _saleInvoiceLogic;
 
-        public SaleInvoiceController(IGenericRepository<SaleInvoiceEntity> saleInvoice, IMapper mapper)
+        public SaleInvoiceController(IGenericRepository<SaleInvoiceEntity> saleInvoice, IMapper mapper, IGenericRepository<ProductMovementEntity> productMovement)
         {
             _saleInvoice = saleInvoice;
             _mapper = mapper;
-            _saleInvoiceLogic = new(_saleInvoice, _mapper);
+            _productMovement = productMovement;
+            _saleInvoiceLogic = new(_saleInvoice, _mapper, _productMovement);
         }
 
         [HttpGet]
@@ -38,9 +40,9 @@ namespace API.Controllers
         }
 
         [HttpPost]
-        public async Task<ResponseOk<SaleInvoiceDto>> PostSaleInvoice([FromBody] SaleInvoiceEntity saleInvoice)
+        public async Task<ResponseOk<SaleInvoiceDto>> PostSaleInvoice([FromBody] SaleInvoiceEntity saleInvoice, [FromHeader] HeadersMap headers)
         {
-            return await _saleInvoiceLogic.PostSaleInvoice(saleInvoice);
+            return await _saleInvoiceLogic.PostSaleInvoice(saleInvoice, headers);
         }
 
         [HttpPut]

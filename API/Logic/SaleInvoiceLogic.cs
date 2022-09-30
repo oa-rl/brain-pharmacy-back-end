@@ -5,19 +5,23 @@ using Core;
 using Core.Entities;
 using Core.Interfaces;
 using Core.Specifications;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
 
 namespace API.Logic
 {
     public class SaleInvoiceLogic
     {
         private readonly IGenericRepository<SaleInvoiceEntity> _saleInvoice;
+        private readonly IGenericRepository<ProductMovementEntity> _productMovement;
         private readonly IMapper _mapper;
 
 
-        public SaleInvoiceLogic(IGenericRepository<SaleInvoiceEntity> saleInvoice, IMapper mapper)
+        public SaleInvoiceLogic(IGenericRepository<SaleInvoiceEntity> saleInvoice, IMapper mapper, IGenericRepository<ProductMovementEntity> productMovement)
         {
             _saleInvoice = saleInvoice;
             _mapper = mapper;
+            _productMovement = productMovement;
         }
 
         public async Task<Pagination<SaleInvoiceDto>> GetSaleInvoiceLogic(SaleInvoiceSpecParams saleInvoiceParams)
@@ -39,10 +43,31 @@ namespace API.Logic
 
         }
 
-        public async Task<ResponseOk<SaleInvoiceDto>> PostSaleInvoice(SaleInvoiceEntity saleInvoice)
+        public async Task<ResponseOk<SaleInvoiceDto>> PostSaleInvoice(SaleInvoiceEntity saleInvoice, HeadersMap headers)
         {
+            var handler = new JwtSecurityTokenHandler();
+            var token = new JwtSecurityToken(headers.Authorization);
+            List<Claim> claims = new();
+            claims.AddRange(token.Claims);
+            int userId = Int32.Parse(claims.FirstOrDefault(claimRecord => claimRecord.Type == ClaimTypes.Sid)!.Value);
+            saleInvoice.UserId = userId;
+           SaleInvoiceEntity SaleInvoiceEntity = await _saleInvoice.Add(saleInvoice);
 
-            SaleInvoiceEntity SaleInvoiceEntity = await _saleInvoice.Add(saleInvoice);
+
+            foreach (SaleInvoiceDetailsEntity detail in saleInvoice.SaleInvoiceDetails!) {
+                ProductMovementEntity movement = new()
+                {
+                    ProductCombinationId = detail.ProductCombinationId,
+                    Quantity = (detail.Amount * -1),
+                    OperationTypeId = 3,
+                    SaleInvoiceId = SaleInvoiceEntity.Id,
+                };
+                await _productMovement.Add(movement);
+            }
+            
+
+
+
             SaleInvoiceDto SaleInvoiceDto = _mapper.Map<SaleInvoiceEntity, SaleInvoiceDto>(SaleInvoiceEntity);
             ResponseOk<SaleInvoiceDto> response = new(201, true, SaleInvoiceDto);
             return response;

@@ -14,9 +14,9 @@ namespace API.Logic
         private readonly IMapper _mapper;
 
 
-        public ProductMovementLogic(IGenericRepository<ProductMovementEntity> user, IMapper mapper)
+        public ProductMovementLogic(IGenericRepository<ProductMovementEntity> productMovement, IMapper mapper)
         {
-            _productMovement = user;
+            _productMovement = productMovement;
             _mapper = mapper;
         }
 
@@ -31,30 +31,29 @@ namespace API.Logic
 
         public async Task<ProductMovementDto> GetProductMovementIdLogic(int id)
         {
-            var user = await _productMovement.GetByIdAsync(id);
-            ProductMovementDto ProductMovementDto = _mapper.Map<ProductMovementEntity, ProductMovementDto>(user);
+            var productMovement = await _productMovement.GetByIdAsync(id);
+            ProductMovementDto ProductMovementDto = _mapper.Map<ProductMovementEntity, ProductMovementDto>(productMovement);
             return ProductMovementDto;
         }
 
-        public async Task<ResponseOk<ProductMovementDto>> PostProductMovement(ProductMovementEntity user)
+        public async Task<ResponseOk<ProductMovementDto>> PostProductMovement(ProductMovementEntity productMovement)
         {
-
-            ProductMovementEntity ProductMovementEntity = await _productMovement.Add(user);
+            ProductMovementEntity ProductMovementEntity = await _productMovement.Add(productMovement);
             ProductMovementDto ProductMovementDto = _mapper.Map<ProductMovementEntity, ProductMovementDto>(ProductMovementEntity);
             ResponseOk<ProductMovementDto> response = new(201, true, ProductMovementDto);
             return response;
         }
 
-        public async Task<ProductMovementDto> PutProductMovement(ProductMovementEntity user)
+        public async Task<ProductMovementDto> PutProductMovement(ProductMovementEntity productMovement)
         {
-            ProductMovementEntity ProductMovementEntity = await _productMovement.Update(user);
+            ProductMovementEntity ProductMovementEntity = await _productMovement.Update(productMovement);
             ProductMovementDto ProductMovementDto = _mapper.Map<ProductMovementEntity, ProductMovementDto>(ProductMovementEntity);
             return ProductMovementDto;
         }
 
-        public async Task<ProductMovementDto> DeleteProductMovement(ProductMovementEntity user)
+        public async Task<ProductMovementDto> DeleteProductMovement(ProductMovementEntity productMovement)
         {
-            ProductMovementEntity ProductMovementEntity = await _productMovement.Delete(user);
+            ProductMovementEntity ProductMovementEntity = await _productMovement.Delete(productMovement);
             ProductMovementDto ProductMovementDto = _mapper.Map<ProductMovementEntity, ProductMovementDto>(ProductMovementEntity);
             return ProductMovementDto;
         }

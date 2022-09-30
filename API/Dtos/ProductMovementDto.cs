@@ -9,5 +9,7 @@
         public int Quantity { get; set; }
         public int OperationTypeId { get; set; }
         public OperationTypeDto? OperationType{ get; set; }
+        public int? SaleInvoiceId { get; set; }
+        public virtual SaleInvoiceDto? SaleInvoice { get; set; }
     }
 }
