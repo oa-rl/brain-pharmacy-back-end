@@ -17,6 +17,7 @@ namespace Core.Entities
         public virtual SaleForEntity? SaleFor { get; set; }
         public int AmountSale { get; set; }
         public double Price { get; set; }
+        public int? Existence { get; set; } = 0;
     }
 }
 
