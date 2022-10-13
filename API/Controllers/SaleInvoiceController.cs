@@ -14,15 +14,18 @@ namespace API.Controllers
     {
         private readonly IGenericRepository<SaleInvoiceEntity> _saleInvoice;
         private readonly IGenericRepository<ProductMovementEntity> _productMovement;
+        private readonly IGenericRepository<ProductCombinationEntity> _productCombination;
         private readonly IMapper _mapper;
         private readonly SaleInvoiceLogic _saleInvoiceLogic;
 
-        public SaleInvoiceController(IGenericRepository<SaleInvoiceEntity> saleInvoice, IMapper mapper, IGenericRepository<ProductMovementEntity> productMovement)
+        public SaleInvoiceController(IGenericRepository<SaleInvoiceEntity> saleInvoice, IMapper mapper, IGenericRepository<ProductMovementEntity> productMovement, IGenericRepository<ProductCombinationEntity> productCombination)
         {
             _saleInvoice = saleInvoice;
             _mapper = mapper;
             _productMovement = productMovement;
-            _saleInvoiceLogic = new(_saleInvoice, _mapper, _productMovement);
+            _productCombination = productCombination;
+
+            _saleInvoiceLogic = new(_saleInvoice, _mapper, _productMovement, _productCombination);
         }
 
         [HttpGet]

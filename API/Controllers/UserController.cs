@@ -40,9 +40,9 @@ namespace API.Controllers
         }
 
         [HttpPost]
-        public async Task<ResponseOk<UserDto>> PostUser([FromBody] UserEntity user)
+        public async Task<ResponseOk<UserDto>> PostUser([FromBody] UserEntity userl)
         {
-            return await _userLogic.PostUser(user);
+            return await _userLogic.PostUser(userl);
         }
 
 

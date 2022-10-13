@@ -11,12 +11,14 @@ namespace API.Logic
     public class ProductMovementLogic
     {
         private readonly IGenericRepository<ProductMovementEntity> _productMovement;
+        private readonly IGenericRepository<ProductCombinationEntity> _productCombination;
         private readonly IMapper _mapper;
 
 
-        public ProductMovementLogic(IGenericRepository<ProductMovementEntity> productMovement, IMapper mapper)
+        public ProductMovementLogic(IGenericRepository<ProductMovementEntity> productMovement, IMapper mapper, IGenericRepository<ProductCombinationEntity> productCombination)
         {
             _productMovement = productMovement;
+            _productCombination = productCombination;
             _mapper = mapper;
         }
 
@@ -38,6 +40,9 @@ namespace API.Logic
 
         public async Task<ResponseOk<ProductMovementDto>> PostProductMovement(ProductMovementEntity productMovement)
         {
+            ProductCombinationEntity combination = await _productCombination.GetByIdAsync(productMovement.ProductCombinationId);
+            combination.Existence += productMovement.Quantity;
+            await _productCombination.Update(combination);
             ProductMovementEntity ProductMovementEntity = await _productMovement.Add(productMovement);
             ProductMovementDto ProductMovementDto = _mapper.Map<ProductMovementEntity, ProductMovementDto>(ProductMovementEntity);
             ResponseOk<ProductMovementDto> response = new(201, true, ProductMovementDto);

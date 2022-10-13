@@ -14,14 +14,16 @@ namespace API.Logic
     {
         private readonly IGenericRepository<SaleInvoiceEntity> _saleInvoice;
         private readonly IGenericRepository<ProductMovementEntity> _productMovement;
+        private readonly IGenericRepository<ProductCombinationEntity> _productCombination;
         private readonly IMapper _mapper;
 
 
-        public SaleInvoiceLogic(IGenericRepository<SaleInvoiceEntity> saleInvoice, IMapper mapper, IGenericRepository<ProductMovementEntity> productMovement)
+        public SaleInvoiceLogic(IGenericRepository<SaleInvoiceEntity> saleInvoice, IMapper mapper, IGenericRepository<ProductMovementEntity> productMovement, IGenericRepository<ProductCombinationEntity> productCombination)
         {
             _saleInvoice = saleInvoice;
             _mapper = mapper;
             _productMovement = productMovement;
+            _productCombination = productCombination;
         }
 
         public async Task<Pagination<SaleInvoiceDto>> GetSaleInvoiceLogic(SaleInvoiceSpecParams saleInvoiceParams)
@@ -63,6 +65,10 @@ namespace API.Logic
                     SaleInvoiceId = SaleInvoiceEntity.Id,
                 };
                 await _productMovement.Add(movement);
+
+                ProductCombinationEntity combination = await _productCombination.GetByIdAsync(detail.ProductCombinationId);
+                combination.Existence += (detail.Amount * -1);
+                await _productCombination.Update(combination);
             }
             
 

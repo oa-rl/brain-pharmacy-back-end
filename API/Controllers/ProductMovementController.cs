@@ -13,14 +13,16 @@ namespace API.Controllers
     public class ProductMovementController: BaseController
     {
         private readonly IGenericRepository<ProductMovementEntity> _productMovement;
+        private readonly IGenericRepository<ProductCombinationEntity> _productCombination;
         private readonly IMapper _mapper;
         private readonly ProductMovementLogic _productMovementLogic;
 
-        public ProductMovementController(IGenericRepository<ProductMovementEntity> user, IMapper mapper)
+        public ProductMovementController(IGenericRepository<ProductMovementEntity> productMovement, IMapper mapper, IGenericRepository<ProductCombinationEntity> productCombination)
         {
-            _productMovement = user;
+            _productMovement = productMovement;
+            _productCombination = productCombination;
             _mapper = mapper;
-            _productMovementLogic = new(_productMovement, _mapper);
+            _productMovementLogic = new(_productMovement, _mapper, _productCombination);
         }
 
         [HttpGet]
@@ -38,22 +40,22 @@ namespace API.Controllers
         }
 
         [HttpPost]
-        public async Task<ResponseOk<ProductMovementDto>> PostProductMovement([FromBody] ProductMovementEntity user)
+        public async Task<ResponseOk<ProductMovementDto>> PostProductMovement([FromBody] ProductMovementEntity productMovement)
         {
-            return await _productMovementLogic.PostProductMovement(user);
+            return await _productMovementLogic.PostProductMovement(productMovement);
         }
 
         [HttpPut]
-        public async Task<ActionResult<ProductMovementDto>> PutProductMovement([FromBody] ProductMovementEntity user)
+        public async Task<ActionResult<ProductMovementDto>> PutProductMovement([FromBody] ProductMovementEntity productMovement)
         {
-            ProductMovementDto update = await _productMovementLogic.PutProductMovement(user);
+            ProductMovementDto update = await _productMovementLogic.PutProductMovement(productMovement);
             return Ok(update);
         }
 
         [HttpDelete]
-        public async Task<ActionResult<ProductMovementDto>> DeleteProductMovement([FromBody] ProductMovementEntity user)
+        public async Task<ActionResult<ProductMovementDto>> DeleteProductMovement([FromBody] ProductMovementEntity productMovement)
         {
-            ProductMovementDto delete = await _productMovementLogic.DeleteProductMovement(user);
+            ProductMovementDto delete = await _productMovementLogic.DeleteProductMovement(productMovement);
             return Ok(delete);
         }
     }
